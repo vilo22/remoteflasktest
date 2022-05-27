@@ -1,0 +1,18 @@
+{# This will be an exploration on how to code in Jinja templating#} #this is a jinja coment#}
+
+{# Jinja allow us to seamleslly blend html code with pythonic statements and the values of python variables #}
+
+{%if true%}
+    {# Above is a jinja condition satement #}
+    {# it starts with a conditional statement just like python#}
+    {# in jinja, because we're actually writing in an html file, we must manually end the code block #}
+{% elif true %}
+ {#jinja conditionals can also have elifs#}
+{% endif %}
+
+{% for i in range(5) %}
+    {# the jinja for loop with repeat the code inside of it adding the result to the template #}
+    <h1 id="{{ i }}">Foxes</h1>
+    {# This for loop would create 5 different h1s each with an id 0 thru 4m all with the contents "Foxes"#}
+    {% endfor %}
+{% endfor %}
